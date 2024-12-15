@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b35879e6b3.js" crossorigin="anonymous"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=new-title@200,300,400,500,700,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>CLOTH.E</title>
+</head>
+<body>
+    <header>
+        <h1>CLOTH.E</h1>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" class="search-input">
+        </div>
+    </header>
+
+    <main>
+        <section class="colection">
+            <figure>
+                <img src="./assets/new-colection.webp" alt="">
+            </figure>
+            <p>LANÇAMENTO</p>
+        </section>
+
+        <div class="filter-container">
+            <button class="filter-btn" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="popular">Populares</button>
+            <button class="filter-btn" data-category="shirts">Parte de Cima</button>
+            <button class="filter-btn" data-category="pants">Parte de Baixo</button>
+            <button class="filter-btn" data-category="acessories">Acessórios</button>
+        </div>
+
+        <section class="content">
+            <h1>POPULAR</h1>
+            <div class="popular-grid"></div>
+            <h1>CAMISAS</h1>
+            <div class="shirts-grid"></div>
+            <h1>ACESSÓRIOS</h1>
+            <div class="acessories-grid"></div>
+        </section>
+
+        <nav>
+            <i class="fa-solid fa-house" onclick="location.href='./index.html';"></i>
+            <i class="fa-solid fa-magnifying-glass" onclick="location.href='./search.html';"></i>
+            <i class="fa-regular fa-user" onclick="location.href='./profile.html';"></i>
+            <i class="fa-solid fa-cart-shopping" onclick="location.href='./cart.html';"></i>
+        </nav>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

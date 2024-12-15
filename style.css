@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'New Title', serif;
+}
+
+:root{
+    --bg-color: #CDC6A9;
+    --primary-color: #A7292F;
+    --secondary-color: #290102;
+    --tertiary-color: #FFFDEF;
+    --logo-size: 5rem;
+    --title-size: 3rem;
+    --text-size: 1.5rem;
+    --ms-primary: 30px 10px;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--ms-primary);
+}
+
+header h1{
+    color: var(--primary-color);
+    font-size: var(--logo-size);
+}
+
+.search-bar{
+    display: flex;
+    background-color: var(--tertiary-color);
+    border-radius: 50px;
+    align-items: center;
+    width: 100%;
+    max-width: 768px;
+    padding: 10px 15px;
+    margin: 30px 0;
+    border: 1px solid transparent;
+    transition: all ease-in-out 0.3s;
+}
+
+.search-bar:hover {
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.search-input{
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: var(--text-size);
+    outline: none;
+}
+
+
+.colection figure{
+    text-align: center;
+}
+
+.colection img{
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.colection {
+    position: relative;
+    margin: var(--ms-primary);
+}
+
+.colection p {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--tertiary-color);
+    font-size: var(--title-size);
+    font-weight: bold;
+}
+
+.filter-container{
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.filter-container::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    border-radius: 4px;
+}
+
+.filter-btn{
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    font-size: var(--text-size);
+    border: none;
+    width: 100px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border-radius: 30px;
+}
+
+h1{
+    color: var(--primary-color);
+    font-size: var(--title-size);
+}
+
+h3, p{
+    color: var(--secondary-color);
+    font-size: var(--text-size);
+    text-transform: uppercase;
+}
+
+.content{
+    margin-bottom: 80px;
+}
+
+.content h1{
+    margin: var(--ms-primary);
+}
+
+.card{
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    border: 1px solid transparent;
+
+}
+
+.card:hover{
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+h3:hover{
+    color: var(--primary-color);
+}
+
+.card img{
+    transition: all ease-in-out 0.3s;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+}
+
+.popular-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 30px;
+    text-align: center;
+    padding: 0 10px;
+    overflow-x: auto;
+}
+
+.shirts-grid, .acessories-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    text-align: center;
+    padding: 0 10px;
+    overflow-x: auto;
+}
+
+.popular-grid::-webkit-scrollbar,
+.shirts-grid::-webkit-scrollbar,
+.acessories-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.popular-grid::-webkit-scrollbar-thumb,
+.shirts-grid::-webkit-scrollbar-thumb,
+.acessories-grid::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    border-radius: 4px;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    background-color: var(--tertiary-color);
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav i{
+    font-size: 20px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+nav i:hover{
+    transform: translateY(-3px);
+}
+
+@media (min-width:1024px) {
+    .content{
+        text-align: center;
+        width: 100%;
+    }
+
+    .popular-grid,.shirts-grid, .acessories-grid{
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        justify-items: center;
+        gap: 100px;
+        padding: 0 100px;
+    }
+
+    .card img{
+        width: 200px;
+    }
+}
